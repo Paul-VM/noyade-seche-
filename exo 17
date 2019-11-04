@@ -1,0 +1,16 @@
+def inverser_chaine(chaine):
+    chaine_reverse = ""
+
+    for i in range(len(chaine) - 1, -1, -1):
+
+        chaine_reverse += chaine[i]
+
+    return chaine_reverse
+
+def palindrome(mot):
+    mot = mot.lower()
+
+    return mot == inverser_chaine(mot)
+
+example_palindrome = palindrome("rotor")
+print(example_palindrome)
