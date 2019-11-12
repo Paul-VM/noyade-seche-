@@ -1,88 +1,30 @@
-print("Résultats Colonel Moutarde :")
+def ADN(seq):
+    C = "est coupable."
+    PC = "n\'est pas coupable."
 
-def position_de_CATA(sequence):
-    if sequence.count('CATA')!=0:
-        return sequence.find('CATA')
+
+    if "CATA" in seq:
+        seq1 = seq.replace("CATA","1111")
+        if "ATGC" in seq1:
+            return C
+        else:
+            return PC
     else:
-        print('ADN non trouvée')
+        return PC
 
+A = "CCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCADN"
+B = "CTCCTGATGCTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGADN"
+C = "AAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGTACTCCGCGCGCCGGGACAGAATGCCADN"
+D = "CTGCAGGAACTTCTTCTGGAAGTACTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAG"
 
-result1=position_de_CATA("CCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCADN")
-print(result1)
+M = ADN(A)
+print("Le Colonel Moutarde",M)
 
-def position_de_ATGC(sequence):
-    if sequence.count('ATGC')!=0:
-        return sequence.find('ATGC')
-    else:
-        print('ADN non trouvée')
+R = ADN(B)
+print("Mlle Rose",R)
 
+P = ADN(C)
+print("Mme Pervenche",P)
 
-result2=position_de_ATGC("CCTGGAGGGTGGCCCCACCGGCCGAGACAGCGAGCATATGCAGGAAGCGGCAGGAATAAGGAAAAGCAGCADN")
-print(result2)
-
-print('Résultats Mme.Rose :')
-
-def position_de_CATA(sequence):
-    if sequence.count('CATA')!=0:
-        return sequence.find('CATA')
-    else:
-        print('ADN non trouvée')
-
-
-result1=position_de_CATA("CTCCTGATGCTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGADN")
-print(result1)
-
-def position_de_ATGC(sequence):
-    if sequence.count('ATGC')!=0:
-        return sequence.find('ATGC')
-    else:
-        print('ADN non trouvée')
-
-result2=position_de_ATGC("CTCCTGATGCTCCTCGCTTGGTGGTTTGAGTGGACCTCCCAGGCCAGTGCCGGGCCCCTCATAGGAGAGGADN")
-print(result2)
-
-print("Résultats Mme.Pervenche :")
-
-def position_de_CATA(sequence):
-    if sequence.count('CATA')!=0:
-        return sequence.find('CATA')
-    else:
-        print("ADN non trouvé")
-
-
-result1=position_de_CATA("AAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGTACTCCGCGCGCCGGGACAGAATGCCADN")
-print(result1)
-
-def position_de_ATGC(sequence):
-    if sequence.count('ATGC')!=0:
-        return sequence.find('ATGC')
-    else:
-        print('ADN non trouvée')
-
-
-result2=position_de_ATGC("AAGCTCGGGAGGTGGCCAGGCGGCAGGAAGGCGCACCCCCCCAGTACTCCGCGCGCCGGGACAGAATGCCADN")
-print(result2)
-
-print("Résultats M.Leblanc :")
-
-def position_de_CATA(sequence):
-    if sequence.count('CATA')!=0:
-        return sequence.find('CATA')
-    else:
-        print('ADN non trouvé')
-
-
-result1=position_de_CATA("CTGCAGGAACTTCTTCTGGAAGTACTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAG")
-print(result1)
-
-def position_de_ATGC(sequence):
-    if sequence.count('ATGC')!=0:
-        return sequence.find('ATGC')
-    else:
-        print('ADN non trouvée')
-
-
-result2=position_de_ATGC("CTGCAGGAACTTCTTCTGGAAGTACTTCTCCTCCTGCAAATAAAACCTCACCCATGAATGCTCACGCAAG")
-print(result2)
-
-print('Colonel Moutarde coupable')
+L = ADN(D)
+print("M. Leblanc",L)
